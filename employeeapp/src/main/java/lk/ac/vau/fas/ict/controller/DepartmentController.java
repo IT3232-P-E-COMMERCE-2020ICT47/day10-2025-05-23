@@ -33,6 +33,26 @@ public class DepartmentController {
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Department> getDept(@PathVariable("id") int id){
+		return new ResponseEntity<Department>(service.getDept(id),HttpStatus.OK);
+		
+	}
+	
+	@PostMapping
+	public ResponseEntity<String> addDept(@RequestBody Department department){
+		return new ResponseEntity<String>(service.addDept(department),HttpStatus.OK);
+		
+	}
+	
+	
+	/*
+	@GetMapping
+	public ResponseEntity<List<Department>> getDept(){
+		return new ResponseEntity<List<Department>>
+		  (service.getDept(),HttpStatus.OK);
+	}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<Department> getDept(@PathVariable("id") int id){
 		if(service.getDept(id) == null) {
 		   return new ResponseEntity<Department>
 		       (service.getDept(id),HttpStatus.NOT_FOUND);
@@ -45,6 +65,7 @@ public class DepartmentController {
 		}
 	}
 	
+	*/
 	
 	/*@Autowired
 	public DepartmentRepo repo;
