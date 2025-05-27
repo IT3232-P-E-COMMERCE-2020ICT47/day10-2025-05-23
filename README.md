@@ -39,18 +39,17 @@ The application follows a layered architecture pattern:
 ```http
 GET /api/departments
 
+```
 ![Screenshot (1135)](https://github.com/user-attachments/assets/1476c891-6fb9-4507-bc49-7609b7ebc8d3)
 
-```
 Returns a list of all departments.
 
 ### Get Department by ID
 ```http
 GET /api/departments/{id}
-
+```
 ![Screenshot (1136)](https://github.com/user-attachments/assets/ac939eee-9945-4c42-be7b-9e5c7fb66640)
 
-```
 Returns a specific department by ID.
 
 **Error Response (404):**
